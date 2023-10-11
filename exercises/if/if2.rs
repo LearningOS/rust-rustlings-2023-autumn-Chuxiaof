@@ -8,11 +8,13 @@
 
 pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
-        return "foo";
+        "foo"
     } else if fizzish == "fuzz" {
-        return "bar";
+        "bar"
+    } else {
+        "baz"
     }
-    "baz"
+
 }
 
 // No test changes needed!
