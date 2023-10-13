@@ -54,9 +54,9 @@ fn count_collection_iterator(collection: &[HashMap<String, Progress>], value: Pr
     // collection = [{ "variables1": Complete, "from_str": None, ... },
     //     { "variables2": Complete, ... }, ... ]
     let mut result = 0;
-    for map in collection.iter(){
-        result += map.iter().fold(0, |count, (key, val)| count + if val == &value {1} else {0});
-    }
+   collection.iter().for_each(|map|
+        result += map.iter().fold(0, |count, (key, val)| count + if val == &value {1} else {0})
+   );
     result
 }
 
